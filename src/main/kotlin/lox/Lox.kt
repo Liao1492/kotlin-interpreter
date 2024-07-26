@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
         1 -> Lox.runFile(args[0])
         else -> {
             println("Usage: klox [script]")
-            exitProcess(ExitCodes.USAGE.value)
+//            exitProcess(ExitCodes.USAGE.value)
         }
     }
 }
@@ -47,9 +47,10 @@ object Lox {
     fun run(source: String) {
         val scanner = Scanner(source)
         val tokens = scanner.scanTokens()
-        val parser = Parser(tokens)
-        val expressions = parser.parse()
-        if (hadError || expressions.any { it == null }) return
+        println(tokens)
+//        val parser = Parser(tokens)
+//        val expressions = parser.parse()
+//        if (hadError || expressions.any { it == null }) return
 //        interpreter.interpret(expressions.filterNotNull())
     }
 

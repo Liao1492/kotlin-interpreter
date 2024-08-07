@@ -3,8 +3,6 @@ import lox.ScannerConstants.ALPHAS
 import lox.ScannerConstants.KEYWORDS
 import lox.TokenType.*
 
-
-
 class Scanner(val source:String) {
     private val tokens:MutableList<Token> = mutableListOf()
     private var start = 0

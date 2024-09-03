@@ -34,18 +34,6 @@ class AstPrinter : Expr.Visitor<String>{
             append(")")
         }
     }
-//    private fun parenthesize(name:String,  vararg exprs: Expr){
-//        return buildString {
-//            append("(")
-//            append(name)
-//            for (expr in exprs) {
-//                append(" ")
-//                // here need to qualify `this` with a tag b/c we're within a buildString
-//                append(expr.accept(this@AstPrinter))
-//            }
-//            append(")")
-//        }
-//    }
 }
 
 fun main() {
